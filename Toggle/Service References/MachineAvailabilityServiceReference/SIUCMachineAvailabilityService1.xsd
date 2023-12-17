@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SIUCMachineAvailabilityService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SIUCMachineAvailabilityService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfLabObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LabObject" nillable="true" type="tns:LabObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLabObject" nillable="true" type="tns:ArrayOfLabObject" />
+  <xs:complexType name="LabObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LabBuilding" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LabClose" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LabFloor" type="xs:int" />
+      <xs:element minOccurs="0" name="LabId" type="xs:int" />
+      <xs:element minOccurs="0" name="LabMachineCount" type="xs:int" />
+      <xs:element minOccurs="0" name="LabName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LabOpen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LabRoom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LabStatus" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LabObject" nillable="true" type="tns:LabObject" />
+  <xs:complexType name="ArrayOfMachineObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MachineObject" nillable="true" type="tns:MachineObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMachineObject" nillable="true" type="tns:ArrayOfMachineObject" />
+  <xs:complexType name="MachineObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LabId" type="xs:int" />
+      <xs:element minOccurs="0" name="MachineId" type="xs:int" />
+      <xs:element minOccurs="0" name="MachineLabel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MachineName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MachineType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MachineObject" nillable="true" type="tns:MachineObject" />
+</xs:schema>

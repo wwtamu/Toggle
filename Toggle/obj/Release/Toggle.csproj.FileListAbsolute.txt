@@ -1,0 +1,5 @@
+E:\Projects\Mobile Dawg\Toggle\Toggle\bin\Release\Toggle.exe.config
+E:\Projects\Mobile Dawg\Toggle\Toggle\bin\Release\Toggle.exe
+E:\Projects\Mobile Dawg\Toggle\Toggle\bin\Release\Toggle.pdb
+E:\Projects\Mobile Dawg\Toggle\Toggle\obj\Release\Toggle.exe
+E:\Projects\Mobile Dawg\Toggle\Toggle\obj\Release\Toggle.pdb

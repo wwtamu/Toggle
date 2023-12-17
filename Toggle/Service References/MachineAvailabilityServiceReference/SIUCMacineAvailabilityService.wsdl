@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SIUCMacineAvailabilityService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://it-appdev1.ad.siu.edu/SIUCMachineAvailabilityService/SIUCMachineAvailabilityService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://it-appdev1.ad.siu.edu/SIUCMachineAvailabilityService/SIUCMachineAvailabilityService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://it-appdev1.ad.siu.edu/SIUCMachineAvailabilityService/SIUCMachineAvailabilityService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://it-appdev1.ad.siu.edu/SIUCMachineAvailabilityService/SIUCMachineAvailabilityService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SIUCMachineAvailabilityService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Logout_InputMessage">
+    <wsdl:part name="parameters" element="tns:Logout" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Logout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Reset_InputMessage">
+    <wsdl:part name="parameters" element="tns:Reset" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Reset_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Initialize_InputMessage">
+    <wsdl:part name="parameters" element="tns:Initialize" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Initialize_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InitializeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetComputersAvailability_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetComputersAvailability" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetComputersAvailability_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetComputersAvailabilityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetLabAvailability_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLabAvailability" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetLabAvailability_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLabAvailabilityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllLabs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllLabs" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllLabs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllLabsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetComputersInLab_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetComputersInLab" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetComputersInLab_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetComputersInLabResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Login" message="tns:IService1_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/LoginResponse" message="tns:IService1_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Logout" message="tns:IService1_Logout_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/LogoutResponse" message="tns:IService1_Logout_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Reset">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Reset" message="tns:IService1_Reset_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ResetResponse" message="tns:IService1_Reset_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Initialize">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Initialize" message="tns:IService1_Initialize_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InitializeResponse" message="tns:IService1_Initialize_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetComputersAvailability">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetComputersAvailability" message="tns:IService1_GetComputersAvailability_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetComputersAvailabilityResponse" message="tns:IService1_GetComputersAvailability_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLabAvailability">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetLabAvailability" message="tns:IService1_GetLabAvailability_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetLabAvailabilityResponse" message="tns:IService1_GetLabAvailability_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLabs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllLabs" message="tns:IService1_GetAllLabs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllLabsResponse" message="tns:IService1_GetAllLabs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetComputersInLab">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetComputersInLab" message="tns:IService1_GetComputersInLab_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetComputersInLabResponse" message="tns:IService1_GetComputersInLab_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IService1/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <soap:operation soapAction="http://tempuri.org/IService1/Logout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reset">
+      <soap:operation soapAction="http://tempuri.org/IService1/Reset" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Initialize">
+      <soap:operation soapAction="http://tempuri.org/IService1/Initialize" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetComputersAvailability">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetComputersAvailability" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLabAvailability">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetLabAvailability" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLabs">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllLabs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetComputersInLab">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetComputersInLab" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SIUCMacineAvailabilityService">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://it-appdev1.ad.siu.edu/SIUCMachineAvailabilityService/SIUCMachineAvailabilityService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

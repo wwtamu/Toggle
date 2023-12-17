@@ -1,0 +1,6 @@
+E:\Projects\Mobile Dawg\Toggle\Toggle\bin\Debug\Toggle.exe.config
+E:\Projects\Mobile Dawg\Toggle\Toggle\bin\Debug\Toggle.exe
+E:\Projects\Mobile Dawg\Toggle\Toggle\bin\Debug\Toggle.pdb
+E:\Projects\Mobile Dawg\Toggle\Toggle\obj\Debug\Toggle.csprojResolveAssemblyReference.cache
+E:\Projects\Mobile Dawg\Toggle\Toggle\obj\Debug\Toggle.exe
+E:\Projects\Mobile Dawg\Toggle\Toggle\obj\Debug\Toggle.pdb
